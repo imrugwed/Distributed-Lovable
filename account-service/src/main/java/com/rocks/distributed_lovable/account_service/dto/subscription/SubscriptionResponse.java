@@ -1,9 +1,11 @@
 package com.rocks.distributed_lovable.account_service.dto.subscription;
 
+import com.rocks.distributed_lovable.common_lib.dto.PlanDto;
+
 import java.time.Instant;
 
 public record SubscriptionResponse(
-        PlanResponse plan,
+        PlanDto plan,
         String status,
         Instant currentPeriodEnd,
         Long tokensUsedThisCycle

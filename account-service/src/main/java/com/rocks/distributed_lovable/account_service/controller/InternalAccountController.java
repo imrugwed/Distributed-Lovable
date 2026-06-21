@@ -1,11 +1,11 @@
 package com.rocks.distributed_lovable.account_service.controller;
 
-import com.codingshuttle.distributed_lovable.account_service.mapper.UserMapper;
-import com.codingshuttle.distributed_lovable.account_service.repository.UserRepository;
-import com.codingshuttle.distributed_lovable.account_service.service.SubscriptionService;
-import com.codingshuttle.distributed_lovable.common_lib.dto.PlanDto;
-import com.codingshuttle.distributed_lovable.common_lib.dto.UserDto;
-import com.codingshuttle.distributed_lovable.common_lib.error.ResourceNotFoundException;
+import com.rocks.distributed_lovable.account_service.mapper.UserMapper;
+import com.rocks.distributed_lovable.account_service.repository.UserRepository;
+import com.rocks.distributed_lovable.account_service.service.SubscriptionService;
+import com.rocks.distributed_lovable.common_lib.dto.PlanDto;
+import com.rocks.distributed_lovable.common_lib.dto.UserDto;
+import com.rocks.distributed_lovable.common_lib.error.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,0 +1,2 @@
+com.rocks.distributed_lovable.common_lib.security.SharedSecurityAutoConfiguration
+com.rocks.distributed_lovable.common_lib.error.SharedExceptionAutoConfiguration

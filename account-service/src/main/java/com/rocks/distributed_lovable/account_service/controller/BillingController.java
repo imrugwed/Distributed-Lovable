@@ -1,8 +1,8 @@
 package com.rocks.distributed_lovable.account_service.controller;
 
-import com.codingshuttle.distributed_lovable.account_service.dto.subscription.*;
-import com.codingshuttle.distributed_lovable.account_service.service.PaymentProcessor;
-import com.codingshuttle.distributed_lovable.account_service.service.SubscriptionService;
+import com.rocks.distributed_lovable.account_service.dto.subscription.*;
+import com.rocks.distributed_lovable.account_service.service.PaymentProcessor;
+import com.rocks.distributed_lovable.account_service.service.SubscriptionService;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.model.Event;
 import com.stripe.model.EventDataObjectDeserializer;

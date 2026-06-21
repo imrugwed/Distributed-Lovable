@@ -35,7 +35,7 @@ public class StripePaymentProcessor implements PaymentProcessor {
     private final UserRepository userRepository;
     private final SubscriptionService subscriptionService;
 
-    @Value("${client.url}")
+    @Value("${app.frontend.url}")
     private String frontendUrl;
 
     @Override
@@ -126,7 +126,7 @@ public class StripePaymentProcessor implements PaymentProcessor {
 
         String subscriptionId = session.getSubscription();
         String customerId = session.getCustomer();
-        
+
         User user = getUser(userId);
         if(user.getStripeCustomerId() == null) {
             user.setStripeCustomerId(customerId);
