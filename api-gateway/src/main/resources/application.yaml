@@ -2,10 +2,7 @@ spring:
   application:
     name: api-gateway
   config:
-    import: configserver:http://localhost:8888
-  cloud:
-    config:
-      label: main
+    import: configserver:${CONFIG_SERVER_URL:http://localhost:8888} #CONFIG_SERVER_URL->for K8s
 
 
 logging:
