@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: imrugwed/lovable-api-gateway-service:latest
+          image: imrugwed/lovable-api-gateway:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

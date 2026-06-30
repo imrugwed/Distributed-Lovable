@@ -1,0 +1,73 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lovable-main-ingress
+  namespace: lovable-core
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+
+spec:
+  ingressClassName: nginx
+
+  rules:
+
+    # Main App
+    - host: app.nullbornegames.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: lovable-frontend
+                port:
+                  number: 80
+
+    # Root Domain
+    - host: nullbornegames.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: lovable-frontend
+                port:
+                  number: 80
+
+    # WWW
+    - host: www.nullbornegames.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: lovable-frontend
+                port:
+                  number: 80
+
+    # Preview Deployments
+    - host: "*.previews.nullbornegames.com"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: lovable-me-proxy
+                port:
+                  number: 80
+
+    # API
+    - host: api.nullbornegames.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: 80

@@ -6,7 +6,7 @@ spring:
     config.server.git:
       uri: https://github.com/imrugwed/lovable-config-server
       username: imrugwed
-      password: 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P
+      password: #in .env
       default-label: main
 
 server.port: 8888
@@ -34,6 +34,7 @@ spring:
       uri: https://github.com/imrugwed/lovable-config-server
       username: ${GIT_USERNAME}
       password: ${GIT_PASSWORD}
+      default-label: main
 
 eureka:
   client:
