@@ -10,6 +10,15 @@ metadata:
 spec:
   ingressClassName: nginx
 
+  tls:
+    - hosts:
+        - nullbornegames.com
+        - www.nullbornegames.com
+        - app.nullbornegames.com
+        - api.nullbornegames.com
+        - "*.previews.nullbornegames.com"
+      secretName: lovable-tls
+
   rules:
 
     # Main App

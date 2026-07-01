@@ -16,8 +16,10 @@ public class CorsConfig {
     public CorsWebFilter corsWebFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
         corsConfig.setAllowedOrigins(Arrays.asList(
-                "http://codingshuttle.in",
-                "http://www.codingshuttle.in",
+//                "http://codingshuttle.in",
+//                "http://www.codingshuttle.in",
+                "http://nullbornegames.com",
+                "http://www.nullbornegames.com",
                 "http://localhost:5173"
         ));
         corsConfig.setMaxAge(3600L);
