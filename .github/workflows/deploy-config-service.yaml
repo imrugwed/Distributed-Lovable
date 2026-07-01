@@ -34,11 +34,6 @@ jobs:
           distribution: 'temurin'
           cache: maven # Caches ~/.m2 directory to drastically speed up future builds
 
-      # 3. Grant execute permission to the Maven Wrapper (required on GitHub Actions)
-      - name: Make Maven Wrapper executable
-        working-directory: ./config-service
-        run: chmod +x mvnw
-
       # 3. Build and Push directly using Google Jib (No Docker daemon needed)
       - name: Build and Push Docker Image with Jib
         working-directory: ./config-service
