@@ -1,15 +1,15 @@
-name: Deploy Account Service
+name: Deploy API Gateway Service
 
 on:
   push:
     branches:
       - master
     paths:
-      - 'account-service/**'
+      - 'api-gateway/**'
 
 env:
-  SERVICE_NAME: account-service
-  IMAGE_NAME: imrugwed/lovable-account-service
+  SERVICE_NAME: api-gateway
+  IMAGE_NAME: imrugwed/lovable-api-gateway
 
 permissions:
   id-token: write
@@ -30,10 +30,6 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
-
-      - name: Build and Install Common Lib
-        working-directory: ./common-lib
-        run: ./mvnw clean install -DskipTests
 
       - name: Build and Push Docker Image with Jib
         working-directory: ./${{ env.SERVICE_NAME }}

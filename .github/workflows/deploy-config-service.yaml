@@ -9,7 +9,7 @@ on:
 
 env:
   # The base image name without the tag
-  IMAGE_NAME: imrugwed/lovable-config-server
+  IMAGE_NAME: imrugwed/lovable-config-service
 
 # CRITICAL: These permissions are required for GCP Workload Identity Federation
 permissions:
